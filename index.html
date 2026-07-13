@@ -623,56 +623,42 @@
       <span class="section-label">Download</span>
       <div class="section-divider" aria-hidden="true"></div>
       <h2 id="download-heading">Get Fraktál</h2>
-      <p>Install via pip or download the source directly. One command and you are ready to build.</p>
+      <p>Download the latest release directly from <strong>fraktal.hheuristics.com</strong>. Extract anywhere and install. No git, no GitHub — just the code.</p>
     </div>
-    <div class="download-grid">
-      <div class="download-card primary">
-        <span class="download-card-badge">Recommended</span>
-        <h3>pip install</h3>
-        <p>Install Fraktál directly from the source with pip. Editable mode recommended for development.</p>
-        <div class="code-block" id="pip-code">
-          <span class="comment"># Clone and install Fraktál</span>
-          <span class="cmd">git clone</span> https://github.com/Hunterhghs/Frakt-l.git
-          <span class="cmd">cd</span> <span class="path">Frakt-l</span>
+    <div class="download-grid" style="grid-template-columns:1fr;max-width:600px;margin:0 auto">
+      <div class="download-card primary" style="text-align:center">
+        <div class="download-files" style="justify-content:center">
+          <a href="downloads/fraktal-v0.1.0.zip" class="download-file-link" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            fraktal-v0.1.0.zip <span style="font-weight:400;color:var(--text-muted)">69 KB</span>
+          </a>
+          <a href="downloads/fraktal-v0.1.0.tar.gz" class="download-file-link" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            fraktal-v0.1.0.tar.gz <span style="font-weight:400;color:var(--text-muted)">49 KB</span>
+          </a>
+        </div>
+        <div class="code-block" id="direct-code" style="text-align:left">
+          <span class="comment"># Extract and install</span>
+          <span class="cmd">unzip</span> fraktal-v0.1.0.zip
+          <span class="cmd">cd</span> <span class="path">Frakt-l-main</span>
           <span class="cmd">pip install</span> -e .
 
-          <span class="comment"># Or install directly via pip + git</span>
-          <span class="cmd">pip install</span> git+https://github.com/Hunterhghs/Frakt-l.git
-          <button class="copy-btn" onclick="copyCode('pip-code',this)" aria-label="Copy pip install commands">Copy</button>
+          <span class="comment"># Or with tar</span>
+          <span class="cmd">tar xzf</span> fraktal-v0.1.0.tar.gz
+          <span class="cmd">cd</span> <span class="path">Frakt-l-main</span>
+          <span class="cmd">pip install</span> -e .
+          <button class="copy-btn" onclick="copyCode('direct-code',this)" aria-label="Copy install commands">Copy</button>
         </div>
-        <div class="download-meta">
+        <div class="download-meta" style="justify-content:center">
           <span>Python 3.10+</span>
           <span aria-hidden="true">·</span>
           <span>MIT License</span>
           <span aria-hidden="true">·</span>
-          <span>~50 KB package</span>
-        </div>
-      </div>
-      <div class="download-card">
-        <h3>Direct Download</h3>
-        <p>Download the latest source archive or browse individual release files. No git required.</p>
-        <div class="download-files">
-          <a href="https://github.com/Hunterhghs/Frakt-l/archive/refs/heads/main.zip" class="download-file-link" download>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            fraktal-main.zip
-          </a>
-          <a href="https://github.com/Hunterhghs/Frakt-l/archive/refs/heads/main.tar.gz" class="download-file-link" download>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            fraktal-main.tar.gz
-          </a>
-        </div>
-        <div class="code-block" id="direct-code">
-          <span class="comment"># After downloading and extracting:</span>
-          <span class="cmd">cd</span> <span class="path">Frakt-l-main</span>
-          <span class="cmd">pip install</span> -e .
-          <span class="cmd">export</span> <span class="path">DEEPSEEK_API_KEY</span>=<span class="comment">"sk-your-key-here"</span>
-          <span class="cmd">fraktal</span> setup
-          <span class="cmd">fraktal</span> health
-          <button class="copy-btn" onclick="copyCode('direct-code',this)" aria-label="Copy setup commands">Copy</button>
+          <span>v0.1.0</span>
         </div>
       </div>
     </div>
-    <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:0.8125rem">
+    <p style="text-align:center;margin-top:1.5rem;color:var(--text-muted);font-size:0.8125rem">
       Requires <strong style="color:var(--text-secondary);font-weight:600">Python 3.10+</strong> and a <strong style="color:var(--text-secondary);font-weight:600">DeepSeek API key</strong>.
       Set with: <code style="font-family:'JetBrains Mono',monospace;font-size:0.75rem;background:var(--accent-soft);color:var(--accent);padding:0.125rem 0.375rem">export DEEPSEEK_API_KEY="sk-your-key-here"</code>
     </p>
